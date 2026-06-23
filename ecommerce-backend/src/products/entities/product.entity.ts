@@ -30,8 +30,6 @@ export class Product {
   nullable: true,
 })
 image!: string | null;
-
-  // 🔗 Relation with Category
   @ManyToOne(() => Category, (category) => category.products, {
     onDelete: 'CASCADE',
   })

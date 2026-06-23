@@ -21,10 +21,6 @@ export class PaymentController {
     @InjectRepository(Order)
     private readonly orderRepo: Repository<Order>,
   ) {}
-
-  // =========================
-  // CREATE PAYMENT
-  // =========================
   @Post()
   create(@Body() body: { orderId: number; method: string }) {
     return this.paymentService.createPayment(
@@ -32,18 +28,10 @@ export class PaymentController {
       body.method,
     );
   }
-
-  // =========================
-  // MARK AS PAID
-  // =========================
   @Patch("paid/:id")
   markPaid(@Param("id") id: string) {
     return this.paymentService.markPaid(+id);
   }
-
-  // =========================
-  // STRIPE CHECKOUT
-  // =========================
   @Get("stripe/:orderId")
   async stripePay(@Param("orderId") orderId: string) {
     const order = await this.orderRepo.findOne({

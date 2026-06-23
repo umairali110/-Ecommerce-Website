@@ -21,10 +21,6 @@ import { RolesGuard } from 'src/common/guards/roles.guards';
 @Controller('products')
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
-
-  // ✅ FIXED: Static routes MUST come before dynamic (:id) routes
-  // Otherwise NestJS treats "create" and "upload" as an :id param
-
   @Post('create')
   @UseInterceptors(FileInterceptor('file'))
   createProduct(
@@ -61,8 +57,6 @@ export class ProductsController {
       categoryId ? +categoryId : undefined,
     );
   }
-
-  // ✅ Dynamic :id routes come LAST
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.productsService.findOne(+id);

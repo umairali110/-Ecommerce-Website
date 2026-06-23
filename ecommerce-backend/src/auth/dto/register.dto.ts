@@ -4,7 +4,7 @@ export class RegisterDto {
   @IsNotEmpty({
     message: 'Name is required',
   })
-  name: string;
+  name!: string;
 
   @IsEmail(
     {},
@@ -12,10 +12,10 @@ export class RegisterDto {
       message: 'Please enter a valid email address',
     },
   )
-  email: string;
+  email!: string;
 
   @MinLength(8, {
     message: 'Password must be at least 8 characters',
   })
-  password: string;
+  password!: string;
 }

@@ -23,9 +23,6 @@ export class PaymentService {
     private emailService: EmailService,
   ) {}
 
-  // =========================
-  // CREATE PAYMENT (COD / INIT)
-  // =========================
   async createPayment(orderId: number, method: string) {
     const order = await this.orderRepo.findOne({
       where: { id: orderId },
@@ -45,10 +42,6 @@ export class PaymentService {
 
     return this.paymentRepo.save(payment);
   }
-
-  // =========================
-  // STRIPE PAYMENT
-  // =========================
   async createStripePayment(orderId: number, amount: number) {
     const order = await this.orderRepo.findOne({
       where: { id: orderId },
@@ -58,7 +51,6 @@ export class PaymentService {
     if (!order) {
       throw new NotFoundException("Order not found");
     }
-
     const session = await this.stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "payment",
@@ -82,10 +74,6 @@ export class PaymentService {
 
     return { url: session.url };
   }
-
-  // =========================
-  // MARK AS PAID
-  // =========================
   async markPaid(paymentId: number) {
     const payment = await this.paymentRepo.findOne({
       where: { id: paymentId },
@@ -95,7 +83,6 @@ export class PaymentService {
     if (!payment) {
       throw new NotFoundException("Payment not found");
     }
-
     payment.status = "paid";
     payment.order.status = "confirmed";
 

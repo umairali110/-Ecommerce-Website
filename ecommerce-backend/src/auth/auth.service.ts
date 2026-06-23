@@ -18,9 +18,6 @@ export class AuthService {
 private otpRepo: Repository<Otp>,
 ) {}
 
-  // =========================
-  // REGISTER (STEP 1 - SEND OTP)
-  // =========================
 async register(data: any) {
   const existingUser = await this.userRepo.findOne({
     where: { email: data.email },
@@ -73,7 +70,6 @@ async verifyOtp(
     };
   }
 
-  // delete OTP after use
   await this.otpRepo.delete({
     email,
   });
@@ -97,9 +93,6 @@ async verifyOtp(
     message: 'Registration successful ✔',
   };
 }
-  // =========================
-  // LOGIN
-  // =========================
   async login(data: any) {
     const user = await this.userRepo.findOne({
       where: { email: data.email },

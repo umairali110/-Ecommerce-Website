@@ -10,6 +10,7 @@ import { OrdersModule } from './orders/orders.module';
 import { AdminModule } from './admin/admin.module';
 import { PaymentModule } from './payment/payment.module';
 import { EmailService } from './email/email.service';
+import { ChatModule } from './chat/chat.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { EmailService } from './email/email.service';
       autoLoadEntities: true,
       synchronize: true,
     }),
+    ChatModule,
     UsersModule,
     AuthModule,
     CategoriesModule,
@@ -34,6 +36,7 @@ import { EmailService } from './email/email.service';
     OrdersModule,
     AdminModule,
     PaymentModule,
+    ChatModule,
   ],
   providers: [EmailService],
 })

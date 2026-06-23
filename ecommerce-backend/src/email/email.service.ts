@@ -10,8 +10,6 @@ export class EmailService {
       pass: process.env.EMAIL_PASS,
     },
   });
-
-  // 📦 ORDER PLACED EMAIL (HTML VERSION)
   async sendOrderEmail(to: string, orderId: number, amount: number) {
     await this.transporter.sendMail({
       from: process.env.EMAIL_USER,
@@ -44,8 +42,6 @@ export class EmailService {
     `,
   });
 }
-
-  // 🚚 ORDER SHIPPED EMAIL
   async sendShippedEmail(to: string, orderId: number) {
     await this.transporter.sendMail({
       from: process.env.EMAIL_USER,
@@ -60,8 +56,6 @@ export class EmailService {
       `,
     });
   }
-
-  // ❌ ORDER CANCELLED EMAIL
   async sendCancelledEmail(to: string, orderId: number) {
     await this.transporter.sendMail({
       from: process.env.EMAIL_USER,

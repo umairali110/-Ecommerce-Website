@@ -1,0 +1,50 @@
+[
+  {
+    "keywords": ["shipping", "delivery", "ship", "deliver", "long", "days"],
+    "answer": "We offer free shipping on all orders nationwide! Delivery takes 3 to 5 business days. We ship to all major cities in Pakistan including Karachi, Lahore, Islamabad, Rawalpindi, and Peshawar."
+  },
+  {
+    "keywords": ["return", "refund", "money back", "return policy", "exchange"],
+    "answer": "We offer a 30-day money-back guarantee on all products. The item must be unused and in original packaging. Contact our support team to start a return request."
+  },
+  {
+    "keywords": ["payment", "pay", "cod", "cash", "card", "stripe", "credit", "debit"],
+    "answer": "We accept two payment methods: Cash on Delivery (COD) where you pay when your order arrives, and Credit/Debit Card via Stripe for secure online payment."
+  },
+  {
+    "keywords": ["track", "order", "status", "where", "my order", "orders"],
+    "answer": "You can track your order by logging in and visiting the My Orders page. Order statuses are: Pending, Confirmed, Shipped, Delivered, and Cancelled."
+  },
+  {
+    "keywords": ["cancel", "cancellation", "stop order"],
+    "answer": "Orders can be cancelled before they are shipped. Please contact our support team as soon as possible to cancel your order."
+  },
+  {
+    "keywords": ["account", "register", "signup", "sign up", "login", "log in"],
+    "answer": "You can create an account by clicking Sign In and registering with your name, email and password. Login to access your orders, cart and checkout."
+  },
+  {
+    "keywords": ["price", "cost", "tax", "currency", "rupees", "rs", "expensive", "cheap"],
+    "answer": "All prices are in Pakistani Rupees (Rs). There are no hidden taxes — the price you see is the final price. Shipping is always free."
+  },
+  {
+    "keywords": ["product", "products", "search", "find", "browse", "item"],
+    "answer": "You can browse all products on the Products page. Use the search bar at the top to find specific products. Click any product to see details, price, and stock availability."
+  },
+  {
+    "keywords": ["cart", "add to cart", "basket", "checkout", "buy"],
+    "answer": "Add products to your cart from any product page. View your cart by clicking the cart icon in the navbar. Checkout requires your name, email, phone, and delivery address."
+  },
+  {
+    "keywords": ["support", "help", "contact", "problem", "issue", "complaint"],
+    "answer": "Our customer support is available 24/7 via this chat. For returns, cancellations, or complaints, contact our support team and we will assist you as soon as possible."
+  },
+  {
+    "keywords": ["admin", "dashboard", "manage", "analytics", "revenue"],
+    "answer": "Admin users have access to the Admin Dashboard where they can manage products, view orders, track revenue, and see analytics."
+  },
+  {
+    "keywords": ["hello", "hi", "hey", "help", "start", "what can you do"],
+    "answer": "Hello! 👋 I'm the E-Shop support assistant. I can help you with shipping, returns, payments, order tracking, cancellations, and general store questions. What do you need help with?"
+  }
+]
